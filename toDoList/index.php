@@ -50,7 +50,6 @@ require "./taskController.php";
                                     </div>
                                     <div class="btns row col-6">
 
-                                    <!-- action="./taskController.php?action=editTask&task=<?= $task->task ?>" -->
                                         <form class="formEdit bg-light me-1" action="taskEditor.php?id=<?= $task->id ?>" method="POST">
                                             <button class="bt bg-light col-1 mt-2 d-flex justify-content-center">
                                                 <i class="fa fa-pencil"></i>
