@@ -1,0 +1,99 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 45px;
+  height: 40px;
+}
+
+.app {
+  margin-top: 25px;
+}
+
+.menu {
+  margin-bottom: 25px;
+}
+
+.list-group-item.active {
+  background-color: pink;
+  border-color: palevioletred;
+  border-left: solid 10px palevioletred;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: red;
+}
+
+.page {
+  border: dotted 1px pink;
+  padding: 25px !important;
+}
+
+h4 {
+  color: palevioletred;
+}
+
+.btn {
+  margin-top: 23px;
+  height: 40px;
+}
+
+.btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formEdit {
+  border-radius: 20%;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border: solid 2px black;
+}
+
+.formConfirm {
+  border-radius: 20%;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border: solid 2px black;
+}
+
+.formDelete {
+  border-radius: 20%;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border: solid 2px black;
+}
+
+.bt {
+  border: none;
+}
+
+.confirmation {
+  background-color: palevioletred;
+  font-family: "Courier New", Courier, monospace;
+}
