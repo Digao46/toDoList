@@ -22,21 +22,12 @@
         </div>
     </nav>
 
-    <?php if (isset($_GET['included']) && $_GET['included'] == 1) : ?>
-        <div class="pt-2 text-white d-flex justify-content-center confirmation">
-            <h5>
-                Tarefa Inserida com Sucesso!
-            </h5>
-        </div>
-    <?php endif; ?>
-
-
     <div class="container app">
         <div class="row">
             <div class="col-6 col-md-4 col-lg-3 menu">
                 <ul>
-                    <li class="list-group-item "><a href="./index.php">Tarefas Pendentes</a></li>
-                    <li class="list-group-item active"><a href="#">Nova Tarefa</a></li>
+                    <li class="list-group-item active"><a href="./index.php">Tarefas Pendentes</a></li>
+                    <li class="list-group-item "><a href="newTasks.php">Nova Tarefa</a></li>
                     <li class="list-group-item "><a href="allTasks.php">Todas as Tarefas</a></li>
                 </ul>
             </div>
@@ -45,15 +36,18 @@
                 <div class="container page">
                     <div class="row">
                         <div class="col">
-                            <h4>Nova Tarefa</h4>
+                            <h4>Editar Tarefa</h4>
                             <hr>
                             <div class="row">
-                                <form action="./taskController.php?action=insert" method="POST">
+                                <?php 
+                                $id = $_GET['id'];
+                                ?>
+                                <form action="./taskController.php?action=editTask&id=<?= $id ?>" method="POST">
                                     <div class="form-group ">
-                                        <label> Tarefa: </label>
-                                        <input class="form-control" type="text" name="task" placeholder="Exemplo: Comprar pão" required>
+                                        <label> Novo nome: </label>
+                                        <input class="form-control" type="text" name="taskName" required>
                                     </div>
-                                    <button class="btn btn-outline-dark">Adicionar</button>
+                                    <button class="btn btn-outline-dark">Confirmar</button>
                                 </form>
                             </div>
                         </div>
