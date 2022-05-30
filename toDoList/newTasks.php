@@ -33,15 +33,15 @@
 
     <div class="container app">
         <div class="row">
-            <div class="col-6 col-md-4 col-lg-3 menu">
-                <ul>
+            <div class="col-xs-12 col-md-4 menu">
+                <ul class="ps-2 pe-2">
                     <li class="list-group-item "><a href="./index.php">Tarefas Pendentes</a></li>
                     <li class="list-group-item active"><a href="#">Nova Tarefa</a></li>
                     <li class="list-group-item "><a href="allTasks.php">Todas as Tarefas</a></li>
                 </ul>
             </div>
 
-            <div class="col-6 col-md-8 col-lg-9">
+            <div class="col-xs-12 col-md-8">
                 <div class="container page">
                     <div class="row">
                         <div class="col">
