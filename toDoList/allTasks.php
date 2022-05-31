@@ -56,28 +56,27 @@ require "./taskController.php";
                                     <div class="tasks col-5 col-md-6 mb-4">
                                         <?= $task->task ?> (<?= $task->status ?>)
                                     </div>
-                                    <div class="btns row col-7 col-md-6">
 
+                                    <div class="btns row col-7 col-md-6">
                                         <?php if ($task->status == 'pendente') { ?>
                                             <form class="formEdit bg-light me-1" action="taskEditor.php?id=<?= $task->id ?>" method="POST">
-                                                <button class="bt bg-light col-1 mt-2 d-flex justify-content-center">
-                                                    <i class="fa fa-pencil"></i>
+                                                <button class="bt bg-light col-1 mt-2 d-flex align-content-center justify-content-center">
+                                                    <i class="fa fa-pencil fa-lg"></i>
                                                 </button>
                                             </form>
 
                                             <form class="formConfirm bg-success me-1" action="./taskController.php?action=markAsDone&id=<?= $task->id ?>" method="POST">
-                                                <button class="bt bg-success col-1 mt-2 d-flex justify-content-center">
-                                                    <i class="fa fa-check"></i>
+                                                <button class="bt bg-success col-1 mt-2 d-flex align-content-center justify-content-center">
+                                                    <i class="fa fa-check fa-lg"></i>
                                                 </button>
                                             </form>
                                         <?php } ?>
 
                                         <form class="formDelete bg-danger me-1" action="./taskController.php?action=deleteTask&id=<?= $task->id ?>" method="POST">
-                                            <button class="bt bg-danger col-1 mt-2 d-flex justify-content-center">
-                                                <i class="fa fa-trash"></i>
+                                            <button class="bt bg-danger col-1 mt-2 d-flex align-content-center justify-content-center">
+                                                <i class="fa fa-trash fa-lg"></i>
                                             </button>
                                         </form>
-
                                     </div>
                                 </div>
                             <?php } ?>

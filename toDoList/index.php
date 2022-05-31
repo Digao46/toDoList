@@ -67,19 +67,19 @@ require "./taskController.php";
                                     <div class="btns row col-7 col-md-6">
                                         <form class="formEdit bg-light me-1" action="taskEditor.php?id=<?= $task->id ?>" method="POST">
                                             <button class="bt bg-light col-1 mt-2 d-flex justify-content-center">
-                                                <i class="fa fa-pencil"></i>
+                                                <i class="fa fa-pencil fa-lg"></i>
                                             </button>
                                         </form>
 
                                         <form class="formConfirm bg-success me-1" action="./taskController.php?action=markAsDone&id=<?= $task->id ?>" method="POST">
                                             <button class="bt bg-success col-1 mt-2 d-flex justify-content-center">
-                                                <i class="fa fa-check"></i>
+                                                <i class="fa fa-check fa-lg"></i>
                                             </button>
                                         </form>
 
                                         <form class="formDelete bg-danger me-1" action="./taskController.php?action=deleteTask&id=<?= $task->id ?>" method="POST">
                                             <button class="bt bg-danger col-1 mt-2 d-flex justify-content-center">
-                                                <i class="fa fa-trash"></i>
+                                                <i class="fa fa-trash fa-lg"></i>
                                             </button>
                                         </form>
                                     </div>

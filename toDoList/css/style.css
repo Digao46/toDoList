@@ -51,14 +51,23 @@ h4 {
   color: palevioletred;
 }
 
-.btn {
-  margin-top: 23px;
-  height: 40px;
+.bt {
+  display: flex;
+
+  margin-top: 150px;
+  /* align-items: center; */
+  /* align-content: center; */
+  /* justify-content: center; */
+  /* justify-items: center; */
 }
 
 .btns {
   display: flex;
   justify-content: flex-end;
+}
+
+i {
+  color: black;
 }
 
 .formEdit {
