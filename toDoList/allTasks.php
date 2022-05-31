@@ -3,8 +3,6 @@ $action = "getTasks";
 require "./taskController.php";
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 
@@ -32,14 +30,14 @@ require "./taskController.php";
     <?php if (isset($_GET['deleted']) && $_GET['deleted'] == 1) : ?>
         <div class="pt-2 text-white d-flex justify-content-center confirmation">
             <h5>
-                Tarefa Deletada com Sucesso!
+                Tarefa Excluída com Sucesso!
             </h5>
         </div>
     <?php endif; ?>
 
     <div class="container app">
         <div class="row">
-            <div class="col-xs-12 col-md-4 menu">
+            <div class="col-12 col-md-4 menu">
                 <ul class="ps-2 pe-2">
                     <li class="list-group-item "><a href="./index.php">Tarefas Pendentes</a></li>
                     <li class="list-group-item"><a href="newTasks.php">Nova Tarefa</a></li>
@@ -47,7 +45,7 @@ require "./taskController.php";
                 </ul>
             </div>
 
-            <div class="col-xs-12 col-md-8">
+            <div class="col-12 col-md-8">
                 <div class="container page">
                     <div class="row">
                         <div class="col">
@@ -55,10 +53,10 @@ require "./taskController.php";
                             <hr>
                             <?php foreach ($tasks as $index => $task) { ?>
                                 <div class="row d-flex space-between">
-                                    <div class="tasks mb-4 col-6">
+                                    <div class="tasks col-5 col-md-6 mb-4">
                                         <?= $task->task ?> (<?= $task->status ?>)
                                     </div>
-                                    <div class="btns row col-6">
+                                    <div class="btns row col-7 col-md-6">
 
                                         <?php if ($task->status == 'pendente') { ?>
                                             <form class="formEdit bg-light me-1" action="taskEditor.php?id=<?= $task->id ?>" method="POST">

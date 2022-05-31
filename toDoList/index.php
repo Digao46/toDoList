@@ -45,7 +45,7 @@ require "./taskController.php";
 
     <div class="container app">
         <div class="row">
-            <div class="col-xs-12 col-md-4 menu">
+            <div class="col-12 col-md-4 menu">
                 <ul class="ps-2 pe-2">
                     <li class="list-group-item active"><a href="#">Tarefas Pendentes</a></li>
                     <li class="list-group-item"><a href="./newTasks.php">Nova Tarefa</a></li>
@@ -53,7 +53,7 @@ require "./taskController.php";
                 </ul>
             </div>
 
-            <div class="col-xs-12 col-md-8">
+            <div class="col-12 col-md-8">
                 <div class="container page">
                     <div class="row">
                         <div class="col">
@@ -61,11 +61,10 @@ require "./taskController.php";
                             <hr>
                             <?php foreach ($tasks as $index => $task) { ?>
                                 <div class="row d-flex space-between">
-                                    <div class="tasks mb-4 col-6">
+                                    <div class="tasks col-5 col-md-6 mb-4">
                                         <?= $task->task ?>
                                     </div>
-                                    <div class="btns row col-6">
-
+                                    <div class="btns row col-7 col-md-6">
                                         <form class="formEdit bg-light me-1" action="taskEditor.php?id=<?= $task->id ?>" method="POST">
                                             <button class="bt bg-light col-1 mt-2 d-flex justify-content-center">
                                                 <i class="fa fa-pencil"></i>
@@ -83,7 +82,6 @@ require "./taskController.php";
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                         </form>
-
                                     </div>
                                 </div>
                             <?php } ?>

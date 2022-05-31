@@ -24,7 +24,7 @@
 
     <div class="container app">
         <div class="row">
-            <div class="col-xs-12 col-md-4 menu">
+            <div class="col-12 col-md-4 menu">
                 <ul class="ps-2 pe-2">
                     <li class="list-group-item active"><a href="./index.php">Tarefas Pendentes</a></li>
                     <li class="list-group-item "><a href="newTasks.php">Nova Tarefa</a></li>
@@ -32,7 +32,7 @@
                 </ul>
             </div>
 
-            <div class="col-xs-12 col-md-8">
+            <div class="col-12 col-md-8">
                 <div class="container page">
                     <div class="row">
                         <div class="col">
