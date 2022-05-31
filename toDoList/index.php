@@ -27,6 +27,22 @@ require "./taskController.php";
         </div>
     </nav>
 
+    <?php if (isset($_GET['done']) && $_GET['done'] == 1) : ?>
+        <div class="pt-2 text-white d-flex justify-content-center confirmation">
+            <h5>
+                Tarefa Concluída, adicione uma outra!
+            </h5>
+        </div>
+    <?php endif; ?>
+
+    <?php if (isset($_GET['edited']) && $_GET['edited'] == 1) : ?>
+        <div class="pt-2 text-white d-flex justify-content-center confirmation">
+            <h5>
+                Edição Concluída!
+            </h5>
+        </div>
+    <?php endif; ?>
+
     <div class="container app">
         <div class="row">
             <div class="col-xs-12 col-md-4 menu">
@@ -46,7 +62,7 @@ require "./taskController.php";
                             <?php foreach ($tasks as $index => $task) { ?>
                                 <div class="row d-flex space-between">
                                     <div class="tasks mb-4 col-6">
-                                        <?= $task->task ?> (<?= $task->status ?>)
+                                        <?= $task->task ?>
                                     </div>
                                     <div class="btns row col-6">
 

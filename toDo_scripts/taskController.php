@@ -21,15 +21,16 @@ if ($action == 'insert') {
 } else if ($action == 'getTasks') {
     $tasks = $taskService->getTasks();
 } else if ($action == 'getUndoneTasks') {
-    $tasks = $taskService->getUndoneTasks();
+    $task->__set('id_status', 1);
+    $tasks = $taskService->getUndoneTasks($task);
 } else if ($action == 'deleteTask' && $id != null) {
     $taskService->delete($id);
-    header('Location: allTasks.php');
+    header('Location: allTasks.php?deleted=1');
 } else if ($action == 'markAsDone' && $id != null) {
     $taskService->markAsDone($id);
-    header('Location: index.php');
+    header('Location: index.php?done=1');
 } else if ($action == 'editTask' && $id != null) {
     $newName = $_POST['taskName'];
     $taskService->editTask($id, $newName);
-    header('Location: index.php');
+    header('Location: index.php?edited=1');
 };

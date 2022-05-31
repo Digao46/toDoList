@@ -33,14 +33,15 @@ class TaskServices
     }
 
     // LISTAGEM DE TAREFAS PENDENTES
-    public function getUndoneTasks()
+    public function getUndoneTasks($task)
     {
         $query = 'SELECT t.id, t.task, t.date_register, s.status 
                             FROM tb_tasks as t 
                       LEFT JOIN tb_status as s on (t.id_status = s.id) 
-                            WHERE s.id = 1;';
+                            WHERE s.id = :id_status';
 
         $stmt = $this->connection->prepare($query);
+        $stmt->bindValue(':id_status', $task->__get('id_status'));
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }

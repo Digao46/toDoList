@@ -39,7 +39,7 @@
                             <h4>Editar Tarefa</h4>
                             <hr>
                             <div class="row">
-                                <?php 
+                                <?php
                                 $id = $_GET['id'];
                                 ?>
                                 <form action="./taskController.php?action=editTask&id=<?= $id ?>" method="POST">
