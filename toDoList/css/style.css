@@ -51,13 +51,13 @@ h4 {
   color: palevioletred;
 }
 
-.bt {
-  display: flex;
-}
-
 .btns {
   display: flex;
   justify-content: flex-end;
+}
+
+.bt {
+  border: none;
 }
 
 i {
@@ -92,10 +92,6 @@ i {
   width: 40px;
   overflow: hidden;
   border: solid 2px black;
-}
-
-.bt {
-  border: none;
 }
 
 .confirmation {
